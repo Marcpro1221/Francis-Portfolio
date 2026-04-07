@@ -7,6 +7,7 @@ const heroButtons = [...document.querySelectorAll("[data-hero-dir]")];
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute("href")))
   .filter(Boolean);
+const isSmallScreen = () => window.innerWidth <= 560;
 
 if (toggle && header) {
   toggle.addEventListener("click", () => {
@@ -46,34 +47,64 @@ if (heroTrack && heroButtons.length) {
   });
 }
 
-const revealObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.18, rootMargin: "0px 0px -40px 0px" }
-);
+let revealObserver;
 
-revealItems.forEach((item) => revealObserver.observe(item));
+const setupRevealObserver = () => {
+  if (revealObserver) {
+    revealObserver.disconnect();
+  }
 
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
+  if (isSmallScreen()) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
 
-      const id = `#${entry.target.id}`;
-      navLinks.forEach((link) => {
-        link.classList.toggle("is-active", link.getAttribute("href") === id);
+  revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          revealObserver.unobserve(entry.target);
+        }
       });
-    });
-  },
-  { threshold: 0.45, rootMargin: "-20% 0px -35% 0px" }
-);
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -24px 0px" }
+  );
 
-sections.forEach((section) => sectionObserver.observe(section));
+  revealItems.forEach((item) => {
+    if (!item.classList.contains("is-visible")) {
+      revealObserver.observe(item);
+    }
+  });
+};
+
+let sectionObserver;
+
+const setupSectionObserver = () => {
+  if (sectionObserver) {
+    sectionObserver.disconnect();
+  }
+
+  sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const id = `#${entry.target.id}`;
+        navLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === id);
+        });
+      });
+    },
+    { threshold: 0.35, root: null, rootMargin: "-10% 0px -10% 0px" }
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+};
+
+setupSectionObserver();
+setupRevealObserver();
+window.addEventListener("resize", setupSectionObserver);
+window.addEventListener("resize", setupRevealObserver);

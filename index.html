@@ -8,6 +8,9 @@
     name="description"
     content="A responsive office-room inspired portfolio highlighting profile, skills, education, experience, and featured achievements."
   >
+  <link rel="icon" type="image/jpeg" href="Asset/francis.jfif">
+  <link rel="shortcut icon" type="image/jpeg" href="Asset/francis.jfif">
+  <link rel="apple-touch-icon" href="Asset/francis.jfif">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -22,7 +25,9 @@
 
   <header class="site-header">
     <a class="brand" href="#home">
-      <span class="brand-mark">F</span>
+      <span class="brand-mark">
+        <img src="Asset/francis.jfif" alt="Francis profile">
+      </span>
       <span class="brand-copy">
         <strong>Francis</strong>
         <small>Office Portfolio</small>
@@ -39,7 +44,7 @@
     <nav class="site-nav" id="site-nav">
       <a href="#home">Home</a>
       <a href="#about">About</a>
-      <a href="#featured">Featured</a>
+      <a href="#featured">Objective</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
@@ -47,8 +52,8 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero section" id="home">
+  <main class="page-track" data-page-track>
+    <section class="hero section page-section" id="home">
       <div class="hero-shell reveal">
         <div class="hero-head">
           <div>
@@ -75,7 +80,7 @@
               <div class="frame frame-two"></div>
               <div class="portrait-card">
                 <div class="portrait-photo">
-                  <div class="portrait-avatar">F</div>
+                  <img src="Asset/francis.jfif" alt="Francis portrait">
                 </div>
                 <div class="portrait-caption">
                   <p>Creative portfolio identity</p>
@@ -117,7 +122,7 @@
       </div>
     </section>
 
-    <section class="section content-section" id="about">
+    <section class="section content-section page-section" id="about">
       <div class="section-heading reveal">
         <p class="eyebrow">About me</p>
         <h2>Professional character with purpose-driven direction</h2>
@@ -148,48 +153,48 @@
       </div>
     </section>
 
-    <section class="section content-section featured-section" id="featured">
+    <section class="section content-section featured-section page-section" id="featured">
       <div class="section-heading reveal">
-        <p class="eyebrow">Featured section</p>
-        <h2>Highlights arranged like a professional office showcase</h2>
+        <p class="eyebrow">Objective</p>
+        <h2>Professional objectives guided by value and steady growth</h2>
       </div>
 
       <div class="featured-grid">
         <article class="feature-card reveal accent-card">
-          <span class="card-tag">Focus</span>
-          <h3>Professional Presence</h3>
+          <span class="card-tag">Goal</span>
+          <h3>Deliver Meaningful Work</h3>
           <p>
-            A balanced presentation of strengths, story, and direction, framed in a workspace-inspired interface that
-            feels polished and welcoming.
+            To contribute effort, ideas, and discipline into tasks that create useful outcomes for teams, clients, and
+            future opportunities.
           </p>
         </article>
         <article class="feature-card reveal">
-          <span class="card-tag">Approach</span>
-          <h3>Value-First Mindset</h3>
+          <span class="card-tag">Growth</span>
+          <h3>Strengthen My Skills</h3>
           <p>
-            Every section is structured to communicate usefulness, growth, and readiness for meaningful contribution.
+            To keep improving technical ability, communication, and problem solving through real work and continuous
+            learning.
           </p>
         </article>
         <article class="feature-card reveal">
-          <span class="card-tag">Design</span>
-          <h3>Office Room Theme</h3>
+          <span class="card-tag">Purpose</span>
+          <h3>Build With Integrity</h3>
           <p>
-            Warm wood tones, framed panels, layered surfaces, and soft lighting create a visual identity inspired by a
-            modern office interior.
+            To approach responsibilities with professionalism, accountability, and respect for quality in every task.
           </p>
         </article>
         <article class="feature-card reveal">
-          <span class="card-tag">Experience</span>
-          <h3>Responsive Interaction</h3>
+          <span class="card-tag">Direction</span>
+          <h3>Create Long-Term Value</h3>
           <p>
-            The layout adapts across desktop, tablet, and mobile widths with scroll animations, sticky navigation, and
-            accessible controls.
+            To grow into opportunities where I can support larger goals, adapt quickly, and become a reliable asset in
+            any professional environment.
           </p>
         </article>
       </div>
     </section>
 
-    <section class="section content-section" id="skills">
+    <section class="section content-section page-section" id="skills">
       <div class="section-heading reveal">
         <p class="eyebrow">Skills</p>
         <h2>Capabilities presented as the tools within the room</h2>
@@ -226,7 +231,7 @@
       </div>
     </section>
 
-    <section class="section content-section" id="education">
+    <section class="section content-section page-section" id="education">
       <div class="section-heading reveal">
         <p class="eyebrow">Educational background</p>
         <h2>A timeline of growth and academic foundations</h2>
@@ -257,44 +262,50 @@
       </div>
     </section>
 
-    <section class="section content-section" id="experience">
+    <section class="section content-section page-section" id="experience">
       <div class="section-heading reveal">
         <p class="eyebrow">Experience</p>
-        <h2>Work and project exposure with practical relevance</h2>
+        <h2>List of experience and practical involvement</h2>
       </div>
 
-      <div class="experience-grid">
+      <div class="experience-list">
         <article class="card reveal">
-          <h3>Project Involvement</h3>
-          <p>
-            Include school projects, freelance work, organization roles, or portfolio accomplishments that show
-            initiative and ability to follow through.
-          </p>
+          <span class="card-tag">Experience 01</span>
+          <h3>Academic Projects</h3>
+          <ul class="detail-list">
+            <li>Participated in school-based activities and projects with assigned responsibilities.</li>
+            <li>Worked on presentations, documentation, and collaborative output under deadlines.</li>
+            <li>Developed confidence in planning, coordination, and finishing tasks properly.</li>
+          </ul>
         </article>
         <article class="card reveal">
-          <h3>Responsibilities</h3>
-          <p>
-            Describe situations where you contributed planning, communication, execution, or support that improved the
-            quality of a task or team outcome.
-          </p>
+          <span class="card-tag">Experience 02</span>
+          <h3>Team Collaboration</h3>
+          <ul class="detail-list">
+            <li>Contributed ideas and support during group activities and shared deliverables.</li>
+            <li>Practiced communication, active listening, and accountability in team settings.</li>
+            <li>Helped maintain organized progress and smoother completion of group work.</li>
+          </ul>
         </article>
         <article class="card reveal">
-          <h3>Professional Direction</h3>
-          <p>
-            Use this space to outline the kind of opportunities you are preparing for and the value you intend to
-            bring into future roles.
-          </p>
+          <span class="card-tag">Experience 03</span>
+          <h3>Skill Development</h3>
+          <ul class="detail-list">
+            <li>Built experience through continuous learning, self-improvement, and hands-on practice.</li>
+            <li>Improved adaptability by working through different tasks and learning environments.</li>
+            <li>Strengthened discipline, time management, and attention to detail.</li>
+          </ul>
         </article>
       </div>
     </section>
 
-    <section class="section content-section contact-section" id="contact">
+    <section class="section content-section contact-section page-section" id="contact">
       <div class="contact-card reveal">
         <div>
           <p class="eyebrow">Contact</p>
           <h2>Let this office open the conversation</h2>
           <p>
-            Replace the sample details below with your real email, phone number, and social links to make this
+            Replace the sample details below with real email, phone number, and social links to make this
             portfolio production-ready.
           </p>
         </div>
