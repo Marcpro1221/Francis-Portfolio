@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title>OneDrive</title>
+  <desc>Custom icon badge for OneDrive</desc>
+  <defs>
+    <linearGradient id="bg" x1="12" y1="10" x2="84" y2="88" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2494f2"/>
+      <stop offset="1" stop-color="#0b63c9"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="80" height="80" rx="24" fill="url(#bg)"/>
+  <rect x="14" y="14" width="68" height="68" rx="18" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2"/>
+  <text x="48" y="56" text-anchor="middle" font-family="Manrope, Segoe UI, Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff" letter-spacing="1">OD</text>
+</svg>

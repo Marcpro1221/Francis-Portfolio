@@ -320,6 +320,7 @@ button {
 .hero-copy,
 .card,
 .feature-card,
+.tool-card,
 .skills-board,
 .timeline-card,
 .contact-card {
@@ -663,6 +664,7 @@ button {
 .hero-metrics article,
 .card,
 .feature-card,
+.tool-card,
 .timeline-card,
 .skills-board,
 .contact-card {
@@ -704,6 +706,7 @@ button {
 
 .about-grid,
 .featured-grid,
+.tools-grid,
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -721,6 +724,7 @@ button {
 
 .card,
 .feature-card,
+.tool-card,
 .timeline-card {
   padding: 1.5rem;
   border-radius: var(--radius-lg);
@@ -728,6 +732,7 @@ button {
 
 .card h3,
 .feature-card h3,
+.tool-card h3,
 .timeline-card h3 {
   margin: 0 0 0.8rem;
   font-size: 1.2rem;
@@ -760,6 +765,64 @@ button {
   grid-template-columns: 1.15fr 0.85fr;
   gap: 1.2rem;
   align-items: start;
+}
+
+.tools-section {
+  isolation: isolate;
+}
+
+.tools-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+}
+
+.tool-card {
+  display: grid;
+  gap: 1.35rem;
+  min-width: 0;
+}
+
+.tool-card-head {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.tool-card-head p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.tool-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.tool-item {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  padding: 1rem 0.8rem;
+  border-radius: 1.35rem;
+  border: 1px solid rgba(122, 89, 61, 0.1);
+  background: rgba(255, 251, 246, 0.82);
+  text-align: center;
+}
+
+.tool-item img {
+  width: 3.25rem;
+  height: 3.25rem;
+  flex-shrink: 0;
+}
+
+.tool-item span {
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--text);
+  text-wrap: balance;
 }
 
 .skills-board {
@@ -890,6 +953,7 @@ button {
   }
 
   .about-grid,
+  .tools-grid,
   .experience-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -969,8 +1033,13 @@ button {
   .skills-board,
   .about-grid,
   .featured-grid,
+  .tools-grid,
   .experience-grid {
     grid-template-columns: 1fr;
+  }
+
+  .tool-icons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .timeline-item {
@@ -1026,10 +1095,24 @@ button {
   .contact-card,
   .card,
   .feature-card,
+  .tool-card,
   .timeline-card,
   .skills-board,
   .hero-copy {
     padding: 1.2rem;
+  }
+
+  .tool-icons-grid {
+    gap: 0.75rem;
+  }
+
+  .tool-item {
+    padding: 0.9rem 0.7rem;
+  }
+
+  .tool-item img {
+    width: 3rem;
+    height: 3rem;
   }
 
   .reveal {
